@@ -8,8 +8,8 @@ export default function Watch() {
   return (
     <div className="watch">
       <div className="back">
-        <ArrowBackOutlined />
         <Link to="/" className="link">
+          <ArrowBackOutlined />
           Home
         </Link>
       </div>

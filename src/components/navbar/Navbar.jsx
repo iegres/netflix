@@ -2,6 +2,7 @@ import { ArrowDropDown, Notifications, Search } from "@material-ui/icons";
 import { useState } from "react";
 import "./navbar.scss";
 import { Link } from "react-router-dom";
+import { showNotification } from "../../notification.js";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,17 +33,17 @@ const Navbar = () => {
           <span>My List</span> */}
         </div>
         <div className="right">
-          <Search className="icon" />
+          <Search className="icon" onClick={() => showNotification()} />
           {/* <span>KID</span> */}
-          <Notifications className="icon" />
+          <Notifications className="icon" onClick={() => showNotification()} />
           <img
             src="https://loremflickr.com/500/500"
             alt=""
           />
           <div className="profile">
             <ArrowDropDown className="icon" />
-            <div className="options" style={{padding: "0px 0px 12px"}}>
-              <span>Settings</span>
+            <div className="options" style={{padding: "0px 0px 4px"}}>
+              <span onClick={() => showNotification()}>Settings</span>
               <Link to="/register" className="link">
                 <span>Logout</span>
               </Link>

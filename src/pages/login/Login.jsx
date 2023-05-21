@@ -20,11 +20,18 @@ export default function Login() {
           <input type="password" placeholder="Password" />
           <button className="loginButton"><Link to="/" className="link">Sign In</Link></button>
           <span>
-            New to Netflix? <Link to="/register" className="link"><b>Sign up now.</b></Link>
+            New to Netflix? <Link to="/register" className="link" style={{justifyContent: "start"}}><b>Sign up now.</b></Link>
           </span>
           <small>
-            This page is protected by Google reCAPTCHA to ensure you're not a
-            bot. <b>Learn more</b>.
+            This page is protected by Google reCAPTCHA to ensure you're not a bot.
+            <a href="https://www.google.com/recaptcha/about/"
+              className="link"
+              style={{justifyContent: "start"}}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <b> Learn more</b>.
+            </a>
           </small>
         </form>
       </div>

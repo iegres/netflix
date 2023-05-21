@@ -8,10 +8,10 @@ const Home = () => {
     <div className="home">
       <Navbar />
       <Featured/>
-      <List/>
-      <List/>
-      <List/>
-      <List/>
+      <List listTitle="Continue to watch" />
+      <List listTitle="Popular Movies" />
+      <List listTitle="Popular Series" />
+      <List listTitle="Animated Films" />
     </div>
   );
 };

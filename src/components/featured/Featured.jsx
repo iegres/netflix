@@ -1,6 +1,7 @@
 import { InfoOutlined, PlayArrow } from "@material-ui/icons";
 import "./featured.scss";
 import { Link } from "react-router-dom";
+import { showNotification } from "../../notification.js";
 
 const posters = [
   {
@@ -78,13 +79,13 @@ export default function Featured({ type }) {
           temporibus eum earum? */}
         </span>
         <div className="buttons">
-          <button className="play">
-            <PlayArrow />
-            <Link to="/watch" className="link">
+          <Link to="/watch" className="link">
+            <button className="play">
+              <PlayArrow />
               <span>Play</span>
-            </Link>
-          </button>
-          <button className="more">
+            </button>
+          </Link>
+          <button className="more" onClick={() => showNotification()}>
             <InfoOutlined />
             <span>Info</span>
           </button>
